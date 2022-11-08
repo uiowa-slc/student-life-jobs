@@ -1,6 +1,13 @@
 <template>
   <main>
-    <h1>Jobs</h1>
+    <h2>All currently open jobs:</h2>
+    <ul v-if="jobs.value">
+      <li v-for="job in jobs.value.positions" :key="job.position.id">
+        <NuxtLink :href="'/jobs/' + job.position.id">{{
+          job.position.posting_title
+        }}</NuxtLink>
+      </li>
+    </ul>
     <h2>Jobs by category:</h2>
     <ul v-if="categories.value">
       <li
@@ -33,19 +40,11 @@
         v-for="department in departments.value.departments"
         :key="department.department.id"
       >
-        <NuxtLink :href="'/department/' + category.id"
+        <NuxtLink :href="'/department/' + department.id"
           >{{ department.department.name }} ({{
             department.department.active_job_postings
           }})</NuxtLink
         >
-      </li>
-    </ul>
-    <h2>All currently open jobs:</h2>
-    <ul v-if="jobs.value">
-      <li v-for="job in jobs.value.positions" :key="job.position.id">
-        <NuxtLink :href="'/jobs/' + job.position.id">{{
-          job.position.posting_title
-        }}</NuxtLink>
       </li>
     </ul>
   </main>
@@ -56,6 +55,8 @@ import { ref } from "vue";
 const jobs = ref([]);
 const locations = ref([]);
 const categories = ref([]);
+
+const departments = ref([]);
 // const jobsFeed = ref(await getJobs());
 jobs.value = await getJobs();
 locations.value = await getLocations();

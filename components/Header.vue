@@ -1,6 +1,7 @@
 <template>
   <header>
-    <h1>Student Life Jobs</h1>
+    <!-- <h1>Student Life Jobs</h1> -->
+    <img src="~/assets/images/logo.gif" alt="JobNet" />
     <nav>
       <ul>
         <li><NuxtLink href="/">Home</NuxtLink></li>
