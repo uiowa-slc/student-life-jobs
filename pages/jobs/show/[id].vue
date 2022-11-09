@@ -1,5 +1,8 @@
 <template>
   <main>
+    <Head>
+      <Title>{{ job.posting_title }}</Title>
+    </Head>
     <div v-if="job">
       <h1>{{ job.posting_title }}</h1>
       <p>
@@ -8,7 +11,11 @@
         >
       </p>
       <p>
-        Location: {{ job.work_location }}<br />
+        Location:
+        <NuxtLink :href="'/jobs/location/' + job.location_id">{{
+          job.work_location
+        }}</NuxtLink
+        ><br />
         Rate of pay: {{ job.rate_of_pay }}<br />
         Currently hiring: <strong>{{ job.has_open_job_posting }}</strong
         ><br />

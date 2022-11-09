@@ -1,7 +1,7 @@
 <template>
   <header>
     <!-- <h1>Student Life Jobs</h1> -->
-    <img src="~/assets/images/logo.gif" alt="JobNet" />
+    <img src="~/assets/images/logo.gif" alt="JobNet" class="logo" />
     <nav>
       <ul>
         <li><NuxtLink href="/">Home</NuxtLink></li>
@@ -19,3 +19,9 @@
     </form>
   </header>
 </template>
+<style scoped>
+.logo {
+  max-width: 100%;
+  display: block;
+}
+</style>

@@ -1,10 +1,23 @@
-export const getJobs = async () => {
+export const getJobs = async (category, department, location) => {
   const config = useRuntimeConfig();
   const feedBase = config.API_BASE_URL;
-  //const feedUrl = feedBase + "feed/positions.json";;
-  const feedUrl =
-    "https://spock.imu.uiowa.edu/student-life-jobs/api/open-jobs.json";
+  var feedUrl = feedBase + "feed/positions.json?open=true";
+  var feedParams = "";
+  // const feedUrl =
+  //   "https://spock.imu.uiowa.edu/student-life-jobs/api/open-jobs.json";
 
+  if (category) {
+    feedParams += "&category_id=" + category;
+  }
+
+  if (department) {
+    feedParams += "&department_id=" + department;
+  }
+  if (location) {
+    feedParams += "&location_id=" + location;
+  }
+  feedUrl += feedParams;
+  console.log(feedUrl);
   const { data: feed } = await useFetch(feedUrl, { key: feedUrl });
   //console.log(feedBase + "feed/positions.json");
   return feed;
