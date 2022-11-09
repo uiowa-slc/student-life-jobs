@@ -46,7 +46,7 @@ const job = ref([]);
 const jobFeed = ref([]);
 
 jobFeed.value = await getJob(route.params.id).then((result) => {
-  console.log(result.value);
+  //console.log(result.value);
   job.value = result.value.positions[0].position;
 });
 </script>

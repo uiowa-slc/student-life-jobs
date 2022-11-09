@@ -22,6 +22,7 @@ const category = ref();
 
 jobs.value = await getJobs(route.params.id);
 categoryFeed.value = await getCategory(route.params.id).then((result) => {
+  console.log(result);
   category.value = result.value.categories[0].category;
 });
 </script>
