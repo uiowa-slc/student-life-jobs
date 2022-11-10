@@ -5,13 +5,7 @@
     </Head>
 
     <h1>Jobs in the department "{{ dept.name }}":</h1>
-    <ul v-if="jobs.value">
-      <li v-for="job in jobs.value.positions" :key="job.position.id">
-        <NuxtLink :href="'/jobs/show/' + job.position.id">{{
-          job.position.posting_title
-        }}</NuxtLink>
-      </li>
-    </ul>
+    <JobList :jobs="jobs.value.positions" />
   </main>
 </template>
 <script setup>

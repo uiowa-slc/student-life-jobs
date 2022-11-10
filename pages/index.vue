@@ -1,13 +1,11 @@
 <template>
+  <head>
+    <Title>Find a Job</Title>
+  </head>
   <main>
+    <h1>Find a Job</h1>
     <h2>All currently open jobs:</h2>
-    <ul v-if="jobs.value">
-      <li v-for="job in jobs.value.positions" :key="job.position.id">
-        <NuxtLink :href="'/jobs/show/' + job.position.id">{{
-          job.position.posting_title
-        }}</NuxtLink>
-      </li>
-    </ul>
+    <JobList :jobs="jobs.value.positions" />
     <h2>Jobs by category:</h2>
     <ul v-if="categories.value">
       <li
@@ -59,9 +57,9 @@ const categories = ref([]);
 const departments = ref([]);
 // const jobsFeed = ref(await getJobs());
 jobs.value = await getJobs();
-locations.value = await getLocations();
-categories.value = await getCategories();
-departments.value = await getDepartments();
+// locations.value = await getLocations();
+// categories.value = await getCategories();
+// departments.value = await getDepartments();
 // console.log(jobsFeed.value);
 // jobsFeed = await getJobs().then((result) => {
 //   //   events.value = result.value.events;

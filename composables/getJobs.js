@@ -3,9 +3,15 @@ export const getJobs = async (category, department, location) => {
   const feedBase = config.API_BASE_URL;
   var feedUrl = feedBase + "feed/positions.json?open=true";
   var feedParams = "";
-  // const feedUrl =
+  // var feedUrl =
   //   "https://spock.imu.uiowa.edu/student-life-jobs/api/open-jobs.json";
 
+  // LOAD CACHED VERSION OF OPEN JOBS FOR YOUR SANITY DURING DEV:
+  // (OTHERWISE TAKES 20+ SECONDS TO LOAD, COMMENT OUT LATER)
+  if (!category && !department && !location) {
+    feedUrl =
+      "https://spock.imu.uiowa.edu/student-life-jobs/api/open-jobs.json";
+  }
   if (category) {
     feedParams += "&category_id=" + category;
   }

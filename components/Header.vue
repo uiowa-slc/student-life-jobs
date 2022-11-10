@@ -4,8 +4,7 @@
     <img src="~/assets/images/logo.gif" alt="JobNet" class="logo" />
     <nav>
       <ul>
-        <li><NuxtLink href="/">Home</NuxtLink></li>
-        <li><NuxtLink href="/jobs">Find a Job</NuxtLink></li>
+        <li><NuxtLink href="/">Find a Job</NuxtLink></li>
         <li>
           <NuxtLink href="/working-on-campus">Working on Campus</NuxtLink>
         </li>
@@ -13,10 +12,7 @@
         <li><NuxtLink href="/contact">Contact Us</NuxtLink></li>
       </ul>
     </nav>
-    <form>
-      <input type="search" id="search" placeholder="Search for a job" />
-      <button for="search">Search</button>
-    </form>
+    <Search />
   </header>
 </template>
 <style scoped>
