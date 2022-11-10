@@ -5,7 +5,7 @@
   <main>
     <h1>Find a Job</h1>
     <h2>All currently open jobs:</h2>
-    <JobList :jobs="jobs.value" />
+    <JobList :jobs="jobs.value.positions" />
     <h2>Jobs by category:</h2>
     <ul v-if="categories.value">
       <li
