@@ -67,7 +67,6 @@ export default defineNuxtConfig({
   // },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extractCSS: true,
     // have to transpile font awesome for some reason:
     // https://github.com/nuxt/framework/discussions/3823
     transpile: [

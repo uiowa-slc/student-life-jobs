@@ -1,7 +1,12 @@
 <template>
+  <div>
+    <IowaBar />
+    <Header />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <Footer />
+  </div>
 </template>
 <style lang="scss">
 @import "~/assets/scss/main.scss";

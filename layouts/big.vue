@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container-xl">
     <div class="row">
-      <div class="col-lg-7 pt-4 m-auto">
+      <div class="col-lg-12 pt-4 m-auto">
         <slot />
       </div>
     </div>

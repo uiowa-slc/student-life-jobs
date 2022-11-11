@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Results for "{{ route.params.term }}":</h1>
-    <div v-if="jobs">
+    <div v-if="jobs.length > 0">
       <JobList :jobs="jobs" />
     </div>
     <div v-else>

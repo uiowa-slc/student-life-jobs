@@ -1,9 +1,9 @@
 <template>
   <div>
-    <ul v-if="props.jobs">
+    <ul v-if="props.jobs.length > 0">
       <li v-for="job in props.jobs" :key="job.position.id">
         <NuxtLink :href="'/jobs/show/' + job.position.id">{{
-          job.position.posting_title
+            job.position.posting_title
         }}</NuxtLink>
       </li>
     </ul>
