@@ -2,99 +2,99 @@
     Media Queries
 -------------------------------------------*/
 .footer {
-    font-size: $font-size-sm;
-    background: black;
-    &__summary {
-        a {
-            color: white;
-            text-decoration: underline;
-        }
+  font-size: $font-size-sm;
+  background: black;
+  a {
+    color: white;
+  }
+  &__summary {
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  &__bar-link {
+    &:after {
+      display: inline-block;
+      padding-left: 5px;
+      content: "|";
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: 300px;
+  }
+
+  &__heading {
+    font-size: $font-size-base;
+  }
+
+  &__buttons .btn {
+    font-size: $font-size-base * 0.8;
+  }
+
+  &__socialmedia {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & li {
+      display: inline-block;
     }
 
-    &__bar-link {
+    & li a {
+      color: $white;
+      display: block;
 
-        &:after {
-            display: inline-block;
-            padding-left: 5px;
-            content: "|"
-        }
-    }
-
-    &__logo {
-        display: block;
-        max-width: 300px;
-    }
-
-    &__heading {
-        font-size: $font-size-base;
-    }
-
-    &__buttons .btn {
-        font-size: $font-size-base * .8;
-    }
-
-    &__socialmedia {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        & li {
-            display: inline-block;
-        }
-
-        & li a {
-            color: $white;
-            display: block;
-
-            &:hover,
-            &:focus {
-                color: $gold;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__md {
-        max-width: 36px;
-    }
-
-    &__address {
-        & a {
-            color: $gold;
-
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-            }
-        }
-
-        & i {
-            color: $gray-600;
-        }
-    }
-
-    &__disclaimer a {
-        color: $gray-100;
+      &:hover,
+      &:focus {
+        color: $gold;
         text-decoration: underline;
+      }
+    }
+  }
+
+  &__md {
+    max-width: 36px;
+  }
+
+  &__address {
+    & a {
+      color: $gold;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
 
-    &__copyrightcontainer {
-        background-color: $gold;
+    & i {
+      color: $gray-600;
+    }
+  }
 
-        a {
-            color: $gray-900;
-        }
+  &__disclaimer a {
+    color: $gray-100;
+    text-decoration: underline;
+  }
+
+  &__copyrightcontainer {
+    background-color: $gold;
+
+    a {
+      color: $gray-900;
+    }
+  }
+
+  &__copyright {
+    & p {
+      line-height: 32px;
     }
 
-    &__copyright {
-
-        & p {
-            line-height: 32px;
-        }
-
-        & a {
-            text-decoration: underline;
-        }
+    & a {
+      text-decoration: underline;
     }
-
+  }
 }

@@ -1,14 +1,17 @@
 <template>
   <div>
-    <form class="d-flex" @submit.prevent="handleSearch(term)">
+    <form class="d-flex search" @submit.prevent="handleSearch(term)">
       <input
         type="search"
         id="search"
         v-model="term"
         placeholder="Search for a job"
-        class="form-control"
+        class="form-control border-0 search-input"
       />
-      <button class="btn btn-outline-primary" type="submit">Search</button>
+      <button class="btn" type="submit">
+        <font-awesome-icon :icon="['fas', 'search']" class="search-icon" />
+        <span class="sr-only">Search</span>
+      </button>
     </form>
   </div>
 </template>
@@ -22,3 +25,14 @@ function handleSearch(term) {
   }
 }
 </script>
+<style scoped>
+.search {
+  border: 1px solid #eee;
+}
+
+.search-input {
+}
+.search-icon {
+  color: black;
+}
+</style>

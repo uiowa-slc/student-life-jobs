@@ -31,8 +31,8 @@
                   <button
                     class="navbar-toggler border-0 p-3"
                     type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarText"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
                     aria-controls="navbarText"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
@@ -42,7 +42,7 @@
                       >Menu</span
                     >
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarText">
+                  <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav">
                       <li class="nav-item current nav-item">
                         <NuxtLink class="nav-link" href="/"

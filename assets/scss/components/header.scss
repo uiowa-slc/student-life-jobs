@@ -53,6 +53,9 @@
   font-size: 36px;
   font-weight: 300;
   padding: 20px 20px 20px 15px;
+  &:hover {
+    color: #151515;
+  }
 }
 
 .navbar {
