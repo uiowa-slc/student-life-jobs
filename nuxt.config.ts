@@ -3,4 +3,5 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     API_BASE_URL: "https://apps.studentlife.uiowa.edu/seo/",
   },
+  modules: ['nuxt-jsonld'],
 });
