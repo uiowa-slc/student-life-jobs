@@ -1,0 +1,139 @@
+/* Buttons
+Class names to use in template
+normal: "button"
+black: "button black"
+large: "button large"
+hollow: "button hollow", "button hollow black"
+clear: "button clear", "button clear black"
+/*
+
+/* Foundation button changes */
+.btn {
+  font-size: 14px;
+  letter-spacing: 0.04rem;
+  position: relative;
+  text-transform: uppercase;
+
+  &.btn-sm {
+    font-size: 12px;
+    border-radius: $border-radius;
+  }
+
+  //used in TopicHolder "browse by" tags:
+  &--no-caps {
+    text-transform: none;
+  }
+
+  &.large {
+    font-family: $headings-font-family;
+    font-weight: bold;
+    letter-spacing: 0;
+  }
+
+  & svg {
+    margin-left: rem-calc(5); // adds margin to icons
+    color: #fff;
+    /* sets icon color to white */
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $black;
+    transform-origin: center;
+    transform: translate(-50%, 0) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:focus {
+    text-decoration: underline !important;
+  }
+}
+
+.btn:hover::after,
+.btn:focus::after {
+  transform: translate(-50%, 0) scaleX(1);
+}
+
+// Black button
+.btn.black {
+  & svg {
+    color: $highlight; // Icon
+  }
+
+  &::after {
+    background-color: $highlight; // Hover animation
+  }
+}
+
+// Hollow styles
+.btn-outline-primary {
+  color: $body-color;
+  border: 1px solid #000;
+
+  & svg {
+    color: $highlight; // Icon
+  }
+
+  &::after {
+    background-color: $highlight; // Hover animation
+  }
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+    border-color: #999;
+    background: $body-bg;
+  }
+
+  &.black {
+    & svg {
+      color: $black; // Icon
+    }
+  }
+}
+
+// Clear Styles - No border
+.btn.clear {
+  color: $black;
+  border: none;
+
+  & svg {
+    color: $highlight; // Icon
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $black;
+    text-decoration: underline;
+
+    & svg {
+      color: $black;
+    }
+  }
+
+  &.black {
+    & svg {
+      color: $black; // Icon
+    }
+  }
+}
+
+.btn-zoom {
+  background-color: #00558c;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: darken(#00558c, 20);
+    color: #eee;
+  }
+}

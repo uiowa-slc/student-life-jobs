@@ -1,13 +1,14 @@
 <template>
   <div>
-    <form @submit.prevent="handleSearch(term)">
+    <form class="d-flex" @submit.prevent="handleSearch(term)">
       <input
         type="search"
         id="search"
         v-model="term"
         placeholder="Search for a job"
+        class="form-control"
       />
-      <button type="submit">Search</button>
+      <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
   </div>
 </template>

@@ -1,0 +1,88 @@
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+  background: $gray-100;
+  color: #000;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  -webkit-transform: translate(-50%, -200%);
+  transform: translate(-50%, -200%);
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+
+  &:focus,
+  &:active {
+    -webkit-transform: translate(-50%, 25px);
+    transform: translate(-50%, 25px);
+  }
+}
+
+.navbar-brand {
+}
+
+.nav-item {
+  position: relative;
+  // padding: 10px 0;
+}
+
+.nav-link {
+  // padding: 22px;
+}
+
+.menu-icon {
+  font-size: 16px;
+}
+
+.site-title-container {
+  background: $gold;
+
+  @include media-breakpoint-up(md) {
+    background: white;
+  }
+}
+
+.site-title {
+  display: block;
+  text-decoration: none;
+  color: #151515;
+  font-size: 36px;
+  font-weight: 300;
+  padding: 20px 20px 20px 15px;
+}
+
+.navbar {
+  .nav-item:after,
+  .nav-item-active:after {
+    @include media-breakpoint-up(lg) {
+      background-color: $primary;
+      display: block;
+      width: 0;
+      height: 5px;
+      position: absolute;
+      bottom: 0;
+      content: "";
+      z-index: 1;
+      transition: 0.3s;
+    }
+  }
+
+  .nav-item:hover:after,
+  .nav-item-active:after,
+  .nav-item:has(> .nav-link.router-link-exact-active):after {
+    @include media-breakpoint-up(lg) {
+      background-color: $primary;
+      display: block;
+      width: 100%;
+      height: 5px;
+      position: absolute;
+      bottom: 0;
+      content: "";
+      z-index: 1;
+    }
+  }
+}

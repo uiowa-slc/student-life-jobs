@@ -42,5 +42,5 @@ allJobs.value = await getJobs().then((result) => {
   });
 
   jobs.value = [...resultsSet];
-
+});
 </script>
