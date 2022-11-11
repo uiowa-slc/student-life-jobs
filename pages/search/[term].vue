@@ -13,7 +13,7 @@
 const route = useRoute();
 const allJobs = ref([]);
 const jobs = ref([]);
-
+// @todo: cleanup
 allJobs.value = await getJobs().then((result) => {
   var results = [];
   var resultsSet = new Set();
@@ -42,31 +42,5 @@ allJobs.value = await getJobs().then((result) => {
   });
 
   jobs.value = [...resultsSet];
-  // console.log("jobs.value");
-  // console.log(jobs.value);
 
-  // console.log("filtered by title:");
-  // console.log(jobsFilteredByTitle);
-
-  // console.log("filtered by desc:");
-  // console.log(jobsFilteredByDescription);
-  // positionList.forEach((element, index, array) => {
-  //   if (element.position.posting_title.includes(term)) {
-  //     results.value.push(element);
-  //   }
-  // });
-
-  // return positionList.filter((job) =>
-  //   Object.values(job).some((val) => String(val).toLowerCase().includes(term))
-  // );
-});
-// function filteredResults(search) {
-//   var lowSearch = search.toLowerCase();
-//   return wines.filter((wine) =>
-//     Object.values(wine).some((val) =>
-//       String(val).toLowerCase().includes(lowSearch)
-//     )
-//   );
-// }
-//console.log(results.value);
 </script>
