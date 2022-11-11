@@ -50,16 +50,5 @@ definePageMeta({ layout: "big", });
 </script>
 
 <style>
-.column-list {
-  -moz-column-count: 3;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 20px;
-  column-count: 3;
-  column-gap: 20px;
-}
 
-.active_postings {
-  font-weight: bold;
-}
 </style>
