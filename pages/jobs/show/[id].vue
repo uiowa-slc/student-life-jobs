@@ -43,17 +43,13 @@
                   }}</span>
                 </p>
                 <p>
-                  <uids-button
+                  <a
+                    class="bttn bttn--full bttn--tertiary bttn--small"
                     :href="job.job_posting_url"
-                    color="tertiary"
-                    size="small"
-                    :full="true"
-                    download
                     target="_blank"
                     rel="noopener"
-                    >Apply for this job
-                    <i class="fa-arrow-right fas"></i>
-                  </uids-button>
+                    >Apply for this job <i class="fa-arrow-right fas"></i
+                  ></a>
                 </p>
               </div>
               <p>{{ job.basic_job_function }}</p>
@@ -66,16 +62,13 @@
               <h2>What you will learn:</h2>
               <p>{{ job.what_you_will_learn }}</p>
               <p>
-                <uids-button
+                <a
+                  class="bttn bttn--full bttn--tertiary bttn--large"
                   :href="job.job_posting_url"
-                  color="tertiary"
-                  size="large"
-                  download
                   target="_blank"
                   rel="noopener"
                   >Apply for this job
-                  <i class="fa-arrow-right fas"></i>
-                </uids-button>
+                </a>
               </p>
             </div>
           </main>
@@ -85,7 +78,6 @@
   </div>
 </template>
 <script setup>
-import { UidsButton } from "uids";
 const route = useRoute();
 const job = ref([]);
 const jobFeed = ref([]);
