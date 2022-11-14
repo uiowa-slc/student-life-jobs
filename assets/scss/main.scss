@@ -53,15 +53,14 @@
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
-// scss-docs-end import-stack
-// @import 'bootstrap-vue/src/index.scss';
-
-// And define any of your custom or additional CSS/SCSS here,
-// or via an @import
 
 @import "components/iowa-bar";
 @import "components/header";
-@import "components/buttons";
+
+// Using UIDS Buttons now, hopefully we can use UIDS throughout at some point
+// Commenting out old buttons for now
+// @import "components/buttons";
+
 @import "components/footer";
 @import "components/header-image";
 @import "components/blockquote";
@@ -81,4 +80,48 @@
 
 .bg-lightgray {
   background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-family: "Zilla Slab";
+  font-weight: 600;
+  font-size: clamp(2.3rem, calc(2.3662vw + 1.4127rem), 3.35rem);
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  line-height: 1.25;
+  margin-top: 1.875rem;
+  margin-bottom: 0.325rem;
+  font-size: clamp(1.95rem, calc(0.7887vw + 1.6542rem), 2.3rem);
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  min-height: 25vh;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }

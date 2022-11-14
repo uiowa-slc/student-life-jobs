@@ -13,9 +13,9 @@
 </template>
 <style lang="scss">
 @import "~/assets/scss/main.scss";
+@import "node_modules/uids/src/components/button/button.scss";
 </style>
 <script setup>
-
 // import { ref, defineAsyncComponent, onMounted } from "vue";
 // const isShowBrowse = ref(false);
 // onMounted(() => {
@@ -30,7 +30,6 @@
 titleTemplate: (title) => {
   return title
     ? `${title} - Student Life Jobs | The University of Iowa`
-    : 'Student Life Jobs | The University of Iowa'
-}
-
+    : "Student Life Jobs | The University of Iowa";
+};
 </script>

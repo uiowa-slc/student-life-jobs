@@ -16,6 +16,7 @@
   "dependencies": {
     "bootstrap": "^5.2.2",
     "nuxt-jsonld": "^2.0.6",
-    "vue-gtag": "^2.0.1"
+    "vue-gtag": "^2.0.1",
+    "uids": "git+https://github.com/uiowa/uids.git#2a20b04"
   }
 }
