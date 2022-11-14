@@ -66,16 +66,19 @@
 @import "components/header-image";
 @import "components/blockquote";
 @import "components/breadcrumb";
+@import "components/search";
+@import "components/browse-jobs";
 
 @import "layouts/page";
+@import "layouts/job";
 @import "components/column-list";
 
 //Global Styles:
 
 .bg-gray {
-    background-color: rgb(243, 243, 243);
+  background-color: rgb(243, 243, 243);
 }
 
 .bg-lightgray {
-    background-color: #fafafa;
+  background-color: #fafafa;
 }

@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <Head>
       <Title>{{ location.name }}</Title>
     </Head>
@@ -13,10 +12,12 @@
               <li class="breadcrumb-item">
                 <NuxtLink href="/">Find a Job</NuxtLink>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">Location: {{ location.name }}</li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Location: {{ location.name }}
+              </li>
             </ol>
           </nav>
-          <main>
+          <main id="main">
             <h1>{{ location.name }}</h1>
             <p>The following open jobs are located at {{ location.name }}:</p>
             <JobList :jobs="jobs.value.positions" />
@@ -24,7 +25,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 

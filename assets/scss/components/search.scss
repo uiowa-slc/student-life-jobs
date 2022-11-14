@@ -1,0 +1,29 @@
+.search {
+  border-bottom: 3px solid #ccc;
+  max-width: 600px;
+
+  &:focus {
+    border-color: gold;
+  }
+}
+
+.search-input {
+  //background: #fafafa;
+}
+
+.search-icon {
+  color: black;
+  width: 30px;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.search-button {
+  background: white;
+  border: none;
+}
+
+.search-button svg {
+  width: 40px;
+  padding: 10px;
+}

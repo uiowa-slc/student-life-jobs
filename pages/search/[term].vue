@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <head>
       <Title>Search Results</Title>
     </head>
@@ -13,10 +12,12 @@
               <li class="breadcrumb-item">
                 <NuxtLink href="/">Find a Job</NuxtLink>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Search Results
+              </li>
             </ol>
           </nav>
-          <main>
+          <main id="main">
             <h1>Results for "{{ route.params.term }}":</h1>
             <div v-if="jobs.length > 0">
               <JobList :jobs="jobs" />
@@ -28,7 +29,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 <script setup>

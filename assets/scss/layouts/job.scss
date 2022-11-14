@@ -1,0 +1,14 @@
+.yes {
+  color: #00664f;
+  font-weight: bold;
+}
+
+.no {
+  color: #bd472a;
+}
+
+.sidecar {
+  @include media-breakpoint-up(lg) {
+    max-width: 50%;
+  }
+}

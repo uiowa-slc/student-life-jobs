@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <Head>
       <Title>{{ job.posting_title }}</Title>
       <Meta name="description" :content="job.basic_job_function" />
@@ -9,38 +8,48 @@
     <div class="container content">
       <div class="row">
         <div class="col-lg-8 pt-4 m-auto">
-          <main>
+          <main id="main">
             <div v-if="job">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
                     <NuxtLink href="/">Find a Job</NuxtLink>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">{{ job.posting_title }}</li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    {{ job.posting_title }}
+                  </li>
                 </ol>
               </nav>
 
               <h1>{{ job.posting_title }}</h1>
-              <div class="bg-gray p-4 mb-3 ms-md-3 mb-md-3 float-md-end sidecar">
+              <div
+                class="bg-gray p-4 mb-3 ms-md-3 mb-md-3 float-md-end sidecar"
+              >
                 <p class="">
                   <strong>Location: </strong>
                   <NuxtLink :href="'/jobs/location/' + job.location_id">{{
-                      job.work_location
-                  }}</NuxtLink><br />
+                    job.work_location
+                  }}</NuxtLink
+                  ><br />
                   <strong>Rate of pay:</strong> {{ job.rate_of_pay }}<br />
-                  <strong>Currently hiring:</strong> <span :class="job.has_open_job_posting ? 'yes' : 'no'">{{
-                      job.has_open_job_posting ?
-                        "Yes" : "No"
-                  }}</span><br />
+                  <strong>Currently hiring:</strong>
+                  <span :class="job.has_open_job_posting ? 'yes' : 'no'">{{
+                    job.has_open_job_posting ? "Yes" : "No"
+                  }}</span
+                  ><br />
                   <strong>Open to non-UI students:</strong>
-                  <span :class="job.has_open_job_posting ? 'yes' : 'no'">{{ job.accepts_non_hawkid_applicants ? "Yes" :
-                      "No"
+                  <span :class="job.has_open_job_posting ? 'yes' : 'no'">{{
+                    job.accepts_non_hawkid_applicants ? "Yes" : "No"
                   }}</span>
                 </p>
                 <p>
-                  <a :href="job.job_posting_url" target="_blank" rel="noopener" class="">Apply
-                    for
-                    this position</a>
+                  <a
+                    :href="job.job_posting_url"
+                    target="_blank"
+                    rel="noopener"
+                    class=""
+                    >Apply for this position</a
+                  >
                 </p>
               </div>
               <p>{{ job.basic_job_function }}</p>
@@ -53,7 +62,9 @@
               <h2>What you will learn:</h2>
               <p>{{ job.what_you_will_learn }}</p>
               <p>
-                <a :href="job.job_posting_url" target="_blank" rel="noopener">Apply for this position</a>
+                <a :href="job.job_posting_url" target="_blank" rel="noopener"
+                  >Apply for this position</a
+                >
               </p>
             </div>
           </main>
@@ -75,15 +86,15 @@ jobFeed.value = await getJob(route.params.id).then((result) => {
 useJsonld(() => ({
   "@context": "http://schema.org",
   "@type": "JobPosting",
-  "datePosted": "2022-11-12T00:00:00",
-  "description": job.value.basic_job_function,
-  "title": job.value.posting_title,
-  "employmentType": "PART_TIME",
-  "hiringOrganization": {
+  datePosted: "2022-11-12T00:00:00",
+  description: job.value.basic_job_function,
+  title: job.value.posting_title,
+  employmentType: "PART_TIME",
+  hiringOrganization: {
     "@type": "CollegeOrUniversity",
     "@id": "https://uiowa.edu/#CollegeorUniversity",
-    "name": "University of Iowa",
-    "sameAs": [
+    name: "University of Iowa",
+    sameAs: [
       "https://en.wikipedia.org/wiki/University_of_Iowa",
       "https://goo.gl/maps/vLD8h94JdRB2",
       "https://www.facebook.com/universityofiowa",
@@ -92,48 +103,36 @@ useJsonld(() => ({
       "https://snapchat.com/add/uiowa",
       "https://www.linkedin.com/school/university-of-iowa/",
       "https://www.pinterest.com/uiowa",
-      "https://www.youtube.com/user/universityofiowa"
+      "https://www.youtube.com/user/universityofiowa",
     ],
-    "url": "https://uiowa.edu",
-    "telephone": "+1-319-335-3500",
-    "logo": {
+    url: "https://uiowa.edu",
+    telephone: "+1-319-335-3500",
+    logo: {
       "@type": "ImageObject",
-      "url": "https://uiowa.edu/themes/custom/uids_base/uids/assets/images/uiowa-primary.png"
+      url: "https://uiowa.edu/themes/custom/uids_base/uids/assets/images/uiowa-primary.png",
     },
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Iowa City",
-      "addressRegion": "IA",
-      "postalCode": "52242"
+      addressLocality: "Iowa City",
+      addressRegion: "IA",
+      postalCode: "52242",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": "41.6639115 (WGS 84)",
-      "longitude": "-91.535741 (WGS 84)"
-    }
+      latitude: "41.6639115 (WGS 84)",
+      longitude: "-91.535741 (WGS 84)",
+    },
   },
-  "jobLocation": {
+  jobLocation: {
     "@type": "Place",
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Iowa City",
-      "addressRegion": "IA",
-      "postalCode": "52242"
+      addressLocality: "Iowa City",
+      addressRegion: "IA",
+      postalCode: "52242",
     },
   },
 }));
 </script>
 <style scoped>
-.yes {
-  color: #00664F;
-  font-weight: bold;
-}
-
-.no {
-  color: #BD472A;
-}
-
-.sidecar {
-  max-width: 50%;
-}
 </style>

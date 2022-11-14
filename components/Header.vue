@@ -1,13 +1,17 @@
 <template>
   <header class="header border-bottom">
-    <!-- <a class="skip-link small" href="">Skip to main content</a> -->
+    <a class="skip-link sr-only" href="#main">Skip to main content</a>
     <div class="container-fluid">
       <div class="row border-bottom site-title-container">
         <div class="col">
           <div class="container-xl">
             <div class="row">
               <div class="col">
-                <NuxtLink class="site-title" href="/" aria-label="Campus Activities Board">
+                <NuxtLink
+                  class="site-title"
+                  href="/"
+                  aria-label="Campus Activities Board"
+                >
                   Student Life Jobs
                 </NuxtLink>
               </div>
@@ -20,5 +24,4 @@
   </header>
 </template>
 <style scoped>
-
 </style>
