@@ -42,7 +42,7 @@
                     job.accepts_non_hawkid_applicants ? "Yes" : "No"
                   }}</span>
                 </p>
-                <p>
+                <p class="mb-0">
                   <a
                     class="bttn bttn--full bttn--tertiary bttn--small"
                     :href="job.job_posting_url"
@@ -63,7 +63,7 @@
               <p>{{ job.what_you_will_learn }}</p>
               <p>
                 <a
-                  class="bttn bttn--full bttn--tertiary bttn--large"
+                  class="bttn bttn--tertiary bttn--large"
                   :href="job.job_posting_url"
                   target="_blank"
                   rel="noopener"
@@ -83,7 +83,7 @@ const job = ref([]);
 const jobFeed = ref([]);
 
 jobFeed.value = await getJob(route.params.id).then((result) => {
-  console.log(result.value);
+  //console.log(result.value);
   job.value = result.value.positions[0].position;
 });
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="search">
     <form
       class="d-flex mx-auto search mb-4"
       @submit.prevent="handleSearch(term)"

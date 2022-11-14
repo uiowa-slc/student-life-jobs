@@ -36,7 +36,7 @@ const location = ref();
 
 jobs.value = await getJobs(null, null, route.params.id);
 locationFeed.value = await getLocation(route.params.id).then((result) => {
-  console.log(result);
+  // console.log(result);
   location.value = result.value.locations[0].location;
 });
 </script>

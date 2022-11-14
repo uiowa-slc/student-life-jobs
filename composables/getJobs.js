@@ -7,7 +7,7 @@ export const getJobs = async (category, department, location) => {
   // LOAD CACHED VERSION OF OPEN JOBS FOR YOUR SANITY DURING DEV:
   // (OTHERWISE TAKES 20+ SECONDS TO LOAD)
 
-  if (process.env.NODE_ENV == 'development') {
+  if (process.env.NODE_ENV == "development") {
     if (!category && !department && !location) {
       feedUrl =
         "https://spock.imu.uiowa.edu/student-life-jobs/api/open-jobs.json";
@@ -25,7 +25,7 @@ export const getJobs = async (category, department, location) => {
     feedParams += "&location_id=" + location;
   }
   feedUrl += feedParams;
-  console.log(feedUrl);
+  // console.log(feedUrl);
   const { data: feed } = await useFetch(feedUrl, { key: feedUrl });
   //console.log(feedBase + "feed/positions.json");
   return feed;

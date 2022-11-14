@@ -147,7 +147,7 @@
             </p>
             <p>
               <NuxtLink href="/jobs/department/1"
-                >View all jobs in Housing &amp; Dining</NuxtLink
+                >View all jobs in Housing and Dining</NuxtLink
               >
             </p>
             <h2>Vice President for Student Life</h2>
