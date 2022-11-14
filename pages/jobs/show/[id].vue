@@ -85,7 +85,7 @@
   </div>
 </template>
 <script setup>
-import { UidsButton } from "./node_modules/uids";
+import { UidsButton } from "uids";
 const route = useRoute();
 const job = ref([]);
 const jobFeed = ref([]);
