@@ -9,7 +9,7 @@
               aria-label="Site Navigation"
             >
               <button
-                class="navbar-toggler border-0 py-3"
+                class="navbar-toggler border-0 px-0 py-3"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#mainNav"

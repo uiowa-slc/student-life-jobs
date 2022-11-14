@@ -5,17 +5,18 @@
       <div class="row border-bottom site-title-container">
         <div class="col">
           <div class="container-xl">
-            <div class="row">
-              <div class="col">
-                <NuxtLink
-                  class="site-title"
-                  href="/"
-                  aria-label="Campus Activities Board"
-                >
-                  Student Life Jobs
-                </NuxtLink>
-              </div>
-            </div>
+            <a
+              href="https://studentlife.uiowa.edu"
+              class="parent-site-title d-block d-md-none"
+              >Division of Student Life</a
+            >
+            <NuxtLink
+              class="site-title"
+              href="/"
+              aria-label="Student Life Jobs"
+            >
+              Student Life Jobs
+            </NuxtLink>
           </div>
         </div>
       </div>

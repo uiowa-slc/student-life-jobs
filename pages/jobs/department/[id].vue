@@ -38,7 +38,7 @@ const dept = ref();
 
 jobs.value = await getJobs(null, route.params.id);
 deptFeed.value = await getDepartment(route.params.id).then((result) => {
-  console.log(result);
+  //console.log(result);
   dept.value = result.value.departments[0].department;
 });
 </script>
