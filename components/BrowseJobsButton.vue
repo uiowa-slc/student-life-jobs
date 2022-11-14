@@ -22,5 +22,4 @@
   </div>
 </template>
 <script setup>
-import { UidsButton } from "uids";
 </script>
