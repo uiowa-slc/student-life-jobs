@@ -85,7 +85,7 @@
   </div>
 </template>
 <script setup>
-import { UidsButton } from "~/node_modules/uids";
+import { UidsButton } from "./node_modules/uids";
 const route = useRoute();
 const job = ref([]);
 const jobFeed = ref([]);
@@ -103,8 +103,7 @@ useJsonld(() => ({
   title: job.value.posting_title,
   employmentType: "PART_TIME",
   hiringOrganization: {
-    "@type": "CollegeOrUniversity",
-    "@id": "https://uiowa.edu/#CollegeorUniversity",
+    "@type": "Organization",
     name: "University of Iowa",
     sameAs: [
       "https://en.wikipedia.org/wiki/University_of_Iowa",

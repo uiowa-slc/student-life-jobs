@@ -5,9 +5,6 @@
       <NuxtPage />
     </NuxtLayout>
     <BrowseJobsButton />
-    <!-- <div v-if="isShowBrowse">
-      <BrowseJobs />
-    </div> -->
     <Footer />
   </div>
 </template>
@@ -16,20 +13,15 @@
 @import "node_modules/uids/src/components/button/button.scss";
 </style>
 <script setup>
-// import { ref, defineAsyncComponent, onMounted } from "vue";
-// const isShowBrowse = ref(false);
-// onMounted(() => {
-//   isShowBrowse.value = true;
-// });
-
-// const BrowseJobs = defineAsyncComponent(() =>
-//   import("~/components/BrowseJobs.vue")
-// );
-
-// import { UidsBrandBar } from "uids";
-titleTemplate: (title) => {
-  return title
-    ? `${title} - Student Life Jobs | The University of Iowa`
-    : "Student Life Jobs | The University of Iowa";
-};
+useHead({
+  // as a string,
+  // where `%s` is replaced with the title
+  // titleTemplate: '%s - After Class | The University of Iowa'
+  // ... or as a function
+  titleTemplate: (title) => {
+    return title
+      ? `${title} - Student Life Jobs | The University of Iowa`
+      : "Student Life Jobs | The University of Iowa";
+  },
+});
 </script>
