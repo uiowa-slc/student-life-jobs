@@ -11,12 +11,12 @@
     "nuxt": "3.0.0-rc.13",
     "@nuxtjs/google-fonts": "^3.0.0-0",
     "sass": "^1.55.0",
-    "sass-loader": "10.1.1"
+    "sass-loader": "10.1.1",
+    "uids": "git+https://github.com/uiowa/uids.git#2a20b04"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
     "nuxt-jsonld": "^2.0.6",
-    "vue-gtag": "^2.0.1",
-    "uids": "git+https://github.com/uiowa/uids.git#2a20b04"
+    "vue-gtag": "^2.0.1"
   }
 }
