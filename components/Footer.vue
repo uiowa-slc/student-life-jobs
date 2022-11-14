@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- Instagram Feed -->
-    <section class="instafeed py-5" aria-labelledby="instagramid">
-      <div class="container-fluid">
+    <section class="instafeed pt-5" aria-labelledby="instagramid">
+      <div class="container-xl">
         <div class="row justify-content-center">
           <div class="col-lg-12">
             <h3 id="instagramid">
@@ -18,7 +18,7 @@
       </div>
     </section>
     <footer class="footer bg-black text-white">
-      <div class="footer__container container-fluid footer__container--with-social">
+      <div class="footer__container container-xl footer__container--with-social">
         <div class="row py-5">
           <div class="col-12 col-md-6 col-lg-4">
             <div class="footer__info pb-3">
@@ -36,7 +36,7 @@
 
               <div class="footer__address my-3" itemscope="" itemtype="http://schema.org/PostalAddress">
                 <p>
-                  <font-awesome-icon icon="fas fa-phone mx-2" />
+                  <!-- <font-awesome-icon icon="fas fa-phone mx-2" /> -->
                   <a href="tel:319-335-3557"> 319-335-3557 </a>
                 </p>
               </div>
@@ -84,8 +84,7 @@
                       </li>
 
                       <li class="col-6">
-                        <NuxtLink href="https://md.studentlife.uiowa.edu/clients/event-promotion-best-practices"
-                          class="text-light d-block py-2">Contact Us</NuxtLink>
+                        <NuxtLink href="/contact" class="text-light d-block py-2">Contact Us</NuxtLink>
                       </li>
                     </ul>
                   </div>
@@ -112,12 +111,12 @@
                 © 2022
                 <a href="http://www.uiowa.edu/">The University of Iowa</a>. All
                 Rights Reserved.
-                <a href="http://www.uiowa.edu/homepage/online-privacy-information" class="footer__bar-link">Privacy
+                <a href="http://www.uiowa.edu/homepage/online-privacy-information" class="footer__bar-link"> Privacy
                   Information</a>
                 <a href="https://opsmanual.uiowa.edu/community-policies/nondiscrimination-statement"
-                  class="footer__bar-link">Nondiscrimination Statement</a>
-                <a href="https://uiowa.edu/accessibility" target="_blank" class="footer__bar-link">Accessibility</a>
-                <a href="https://nativeamericancouncil.org.uiowa.edu/" class="footer__bar-link">UI Indigenous Land
+                  class="footer__bar-link"> Nondiscrimination Statement</a>
+                <a href="https://uiowa.edu/accessibility" target="_blank" class="footer__bar-link"> Accessibility</a>
+                <a href="https://nativeamericancouncil.org.uiowa.edu/" class="footer__bar-link"> UI Indigenous Land
                   Acknowledgement</a>
                 Created by
                 <a href="https://slc.studentlife.uiowa.edu/">Student Life Communications</a>

@@ -1,13 +1,33 @@
 <template>
-  <main>
+  <div>
+
     <Head>
       <Title>{{ dept.name }}</Title>
     </Head>
+    <Header />
+    <div class="container content">
+      <div class="row">
+        <div class="col-lg-7 pt-4 m-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <NuxtLink href="/">Find a Job</NuxtLink>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Department: {{ dept.name }}</li>
+            </ol>
+          </nav>
+          <main>
+            <h1>{{ dept.name }}</h1>
+            <p>The following open jobs are in the department {{ dept.name }}:</p>
+            <JobList :jobs="jobs.value.positions" />
+          </main>
+        </div>
+      </div>
+    </div>
 
-    <h1>Jobs in the department "{{ dept.name }}":</h1>
-    <JobList :jobs="jobs.value.positions" />
-  </main>
+  </div>
 </template>
+
 <script setup>
 const route = useRoute();
 const jobs = ref([]);

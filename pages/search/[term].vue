@@ -1,12 +1,34 @@
 <template>
   <div>
-    <h1>Results for "{{ route.params.term }}":</h1>
-    <div v-if="jobs.length > 0">
-      <JobList :jobs="jobs" />
+
+    <head>
+      <Title>Search Results</Title>
+    </head>
+    <Header />
+    <div class="container content">
+      <div class="row">
+        <div class="col-lg-7 pt-4 m-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <NuxtLink href="/">Find a Job</NuxtLink>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+            </ol>
+          </nav>
+          <main>
+            <h1>Results for "{{ route.params.term }}":</h1>
+            <div v-if="jobs.length > 0">
+              <JobList :jobs="jobs" />
+            </div>
+            <div v-else>
+              <p>No results found for this search term.</p>
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
-    <div v-else>
-      <p>No results found for this search term.</p>
-    </div>
+
   </div>
 </template>
 <script setup>

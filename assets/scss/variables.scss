@@ -22,14 +22,12 @@ $gray: #63666a;
 $light: $gray-100;
 $dark: #000;
 
-$theme-colors: ();
-$theme-colors: map-merge(
-  (
-    "gold": $gold,
-    "white": $white,
-  ),
-  $theme-colors
+$theme-colors: (
 );
+$theme-colors: map-merge(("gold": $gold,
+      "white": $white,
+    ),
+    $theme-colors);
 
 $link-color: #00558c;
 $brand-warning: $gold;
@@ -44,7 +42,8 @@ $primary: $gold;
 $secondary: #111;
 
 $enable-smooth-scroll: false;
-
+$breadcrumb-divider-color: $primary;
+$breadcrumb-item-active-color: #000;
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

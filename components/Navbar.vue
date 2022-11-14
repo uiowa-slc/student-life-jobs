@@ -30,7 +30,7 @@
                                         <NuxtLink class="nav-link" href="/contact">Contact Us</NuxtLink>
                                     </li>
                                 </ul>
-                                <Search />
+
                             </div>
                         </nav>
                     </div>
@@ -39,23 +39,3 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-
-    watch: {
-        $route(to, from) {
-            if (this.$refs.navbar.offsetHeight != 0) {
-                this.$refs.navbar.click(); //click on route change
-            }
-        },
-    },
-
-}
-
-// import { route } from 'vue'
-
-// watch(route, (to, from) => {
-//     console.log('route change to', to)
-//     console.log('route change from', from)
-// });
-</script>

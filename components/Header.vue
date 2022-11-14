@@ -20,8 +20,5 @@
   </header>
 </template>
 <style scoped>
-.logo {
-  max-width: 100%;
-  display: block;
-}
+
 </style>

@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     //'~/plugins/bootstrap.js',
-    "~/plugins/fontawesome.js",
+    // "~/plugins/fontawesome.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,9 +70,7 @@ export default defineNuxtConfig({
     // have to transpile font awesome for some reason:
     // https://github.com/nuxt/framework/discussions/3823
     transpile: [
-      "@fortawesome/vue-fontawesome",
-      "@fortawesome/fontawesome-svg-core",
-      "@fortawesome/free-solid-svg-icons",
+
     ],
   },
 });

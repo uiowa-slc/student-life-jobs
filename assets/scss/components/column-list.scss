@@ -1,12 +1,11 @@
 .column-list {
     @include media-breakpoint-up(md) {
         column-count: 2;
-        column-gap: 10px;
+        column-gap: 20px;
     }
 
     @include media-breakpoint-up(lg) {
         column-count: 3;
-        column-gap: 20px;
     }
 }
 
