@@ -6,7 +6,7 @@
           <div class="py-4">
             <h1 class="text-center">Find a job on campus:</h1>
             <div :class="{ 'search-container-home': route.path == '/' }">
-              <Search />
+              <Search :term="''" />
             </div>
           </div>
           <section class="bg-gray p-4">
