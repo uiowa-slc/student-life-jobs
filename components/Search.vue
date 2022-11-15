@@ -29,6 +29,12 @@ const props = defineProps({
   term: String,
 });
 
+var term = "";
+
+if (props.term) {
+  term = props.term;
+}
+
 function handleSearch(term) {
   if (term) {
     router.push("/search/" + term);
