@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col">
             <nav
-              class="navbar navbar-expand-lg navbar-white px-0"
+              class="navbar navbar-expand-md navbar-white px-0"
               aria-label="Site Navigation"
             >
               <button

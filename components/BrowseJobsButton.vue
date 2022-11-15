@@ -2,7 +2,7 @@
   <div class="bg-gray p-4 my-5 browse-jobs">
     <p class="text-center m-0">
       <NuxtLink
-        href="/#search"
+        href="/#find"
         color="tertiary"
         size="large"
         class="bttn bttn--tertiary bttn--large browse-jobs__button"

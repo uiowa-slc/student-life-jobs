@@ -4,26 +4,28 @@
       <Title>{{ category.name }}</Title>
     </Head>
     <Header />
-    <div class="row">
-      <div class="col-lg-7 pt-4 m-auto">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <NuxtLink href="/">Find a Job</NuxtLink>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              Category: {{ category.name }}
-            </li>
-          </ol>
-        </nav>
+    <div class="container content">
+      <div class="row">
+        <div class="col-lg-7 pt-4 m-auto">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <NuxtLink href="/">Find a Job</NuxtLink>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Category: {{ category.name }}
+              </li>
+            </ol>
+          </nav>
 
-        <main id="main">
-          <h1>{{ category.name }}</h1>
-          <p>
-            The following open jobs are categorized as "{{ category.name }}"":
-          </p>
-          <JobList :jobs="jobs.value.positions" />
-        </main>
+          <main id="main">
+            <h1>{{ category.name }}</h1>
+            <p>
+              The following open jobs are categorized as "{{ category.name }}"":
+            </p>
+            <JobList :jobs="jobs.value.positions" />
+          </main>
+        </div>
       </div>
     </div>
   </div>

@@ -31,18 +31,25 @@
                     job.work_location
                   }}</NuxtLink
                   ><br />
-                  <strong>Rate of pay:</strong> {{ job.rate_of_pay }}<br />
-                  <strong>Currently hiring:</strong>
-                  <span :class="job.has_open_job_posting ? 'yes' : 'no'">{{
-                    job.has_open_job_posting ? "Yes" : "No"
-                  }}</span
+                  <strong>Rate of pay: </strong> {{ job.rate_of_pay }}<br />
+                  <strong>Hiring status: </strong>
+                  <span
+                    :class="job.has_open_job_posting == true ? 'yes' : 'no'"
+                    >{{
+                      job.has_open_job_posting == true
+                        ? "Currently hiring"
+                        : "Not currently hiring"
+                    }}</span
                   ><br />
-                  <strong>Open to non-UI students:</strong>
-                  <span :class="job.has_open_job_posting ? 'yes' : 'no'">{{
-                    job.accepts_non_hawkid_applicants ? "Yes" : "No"
-                  }}</span>
+                  <strong>Open to non-UI students: </strong>
+                  <span
+                    :class="job.has_open_job_posting == true ? 'yes' : 'no'"
+                    >{{
+                      job.accepts_non_hawkid_applicants == true ? "Yes" : "No"
+                    }}</span
+                  >
                 </p>
-                <p class="mb-0">
+                <p class="mb-1">
                   <a
                     class="bttn bttn--full bttn--tertiary bttn--small"
                     :href="job.job_posting_url"
@@ -50,6 +57,16 @@
                     rel="noopener"
                     >Apply for this job <i class="fa-arrow-right fas"></i
                   ></a>
+                </p>
+                <p
+                  class="mb-0 text-center"
+                  v-if="job.accepts_non_hawkid_applicants"
+                >
+                  <small class="text-center"
+                    ><a href="https://apps.studentlife.uiowa.edu/seo/"
+                      >Not a UI student? Apply here.</a
+                    ></small
+                  >
                 </p>
               </div>
               <p>{{ job.basic_job_function }}</p>
@@ -61,7 +78,7 @@
               <div v-html="job.training_requirements"></div>
               <h2>What you will learn:</h2>
               <p>{{ job.what_you_will_learn }}</p>
-              <p>
+              <p class="text-center mt-5">
                 <a
                   class="bttn bttn--tertiary bttn--large"
                   :href="job.job_posting_url"
@@ -69,6 +86,16 @@
                   rel="noopener"
                   >Apply for this job
                 </a>
+              </p>
+              <p
+                class="mb-0 text-center"
+                v-if="job.accepts_non_hawkid_applicants"
+              >
+                <small class="text-center"
+                  ><a href="https://apps.studentlife.uiowa.edu/seo/"
+                    >Not a UI student? Apply here.</a
+                  ></small
+                >
               </p>
             </div>
           </main>

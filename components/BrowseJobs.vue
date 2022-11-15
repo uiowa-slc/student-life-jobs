@@ -1,5 +1,5 @@
 <template>
-  <div class="container-xl content bg-lightgray">
+  <div class="container-xl content">
     <div class="row">
       <div class="col-lg-12 m-auto">
         <main>

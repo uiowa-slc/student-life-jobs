@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="row bg-gray my-3">
-        <div class="col-lg-8 m-auto">
+        <div class="col-md-8 m-auto">
           <blockquote class="blockquote blockquote--left">
             <div class="blockquote__content">
               <div class="blockquote__paragraph">
@@ -104,7 +104,7 @@
             </div>
           </blockquote>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <img
             src="~/assets/images/christian.jpg"
             class="d-block w-100 h-auto"
@@ -116,7 +116,7 @@
       </div>
 
       <div class="row my-3">
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <img
             src="~/assets/images/olu.jpg"
             class="d-block w-100 h-auto"
@@ -125,7 +125,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-8 m-auto">
+        <div class="col-md-8 m-auto">
           <blockquote class="blockquote blockquote--left">
             <div class="blockquote__content">
               <div class="blockquote__paragraph">
@@ -153,7 +153,7 @@
       </div>
 
       <div class="row bg-gray my-3">
-        <div class="col-lg-8 m-auto">
+        <div class="col-md-8 m-auto">
           <blockquote class="blockquote blockquote--left">
             <div class="blockquote__content">
               <div class="blockquote__paragraph">
@@ -175,7 +175,7 @@
             </div>
           </blockquote>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <img
             src="~/assets/images/olivia.jpg"
             alt="Olivia Harmon"
@@ -188,7 +188,7 @@
       </div>
 
       <div class="row my-3">
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <img
             src="~/assets/images/shelby.jpg"
             alt="Shelby Cain"
@@ -198,7 +198,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-8 m-auto">
+        <div class="col-md-8 m-auto">
           <blockquote class="blockquote blockquote--left">
             <div class="blockquote__content">
               <div class="blockquote__paragraph">
