@@ -34,18 +34,18 @@
                   <strong>Rate of pay: </strong> {{ job.rate_of_pay }}<br />
                   <strong>Hiring status: </strong>
                   <span
-                    :class="job.has_open_job_posting == true ? 'yes' : 'no'"
+                    :class="job.has_open_job_posting == 'true' ? 'yes' : 'no'"
                     >{{
-                      job.has_open_job_posting == true
+                      job.has_open_job_posting == "true"
                         ? "Currently hiring"
                         : "Not currently hiring"
                     }}</span
                   ><br />
                   <strong>Open to non-UI students: </strong>
                   <span
-                    :class="job.has_open_job_posting == true ? 'yes' : 'no'"
+                    :class="job.has_open_job_posting == 'true' ? 'yes' : 'no'"
                     >{{
-                      job.accepts_non_hawkid_applicants == true ? "Yes" : "No"
+                      job.accepts_non_hawkid_applicants == "true" ? "Yes" : "No"
                     }}</span
                   >
                 </p>
@@ -60,7 +60,7 @@
                 </p>
                 <p
                   class="mb-0 text-center"
-                  v-if="job.accepts_non_hawkid_applicants"
+                  v-if="job.accepts_non_hawkid_applicants == 'true'"
                 >
                   <small class="text-center"
                     ><a href="https://apps.studentlife.uiowa.edu/seo/"

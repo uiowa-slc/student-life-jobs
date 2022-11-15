@@ -3,7 +3,7 @@ export const getJob = async (id) => {
   const feedBase = config.API_BASE_URL;
   const feedUrl = feedBase + "feed/positions.json?id=" + id;
   console.log(feedUrl);
-  const { data: feed } = await useFetch(feedUrl, { key: id });
+  const { data: feed } = await useFetch(feedUrl, { key: feedUrl });
   //console.log(feedBase + "feed/positions.json");
   return feed;
 };
