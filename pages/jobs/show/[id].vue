@@ -108,9 +108,10 @@ const jobFeed = ref([]);
 
 jobFeed.value = await getJob(route.params.id).then((result) => {
   //console.log(result.value);
-  if (result.value.positions) {
+  if (result.value) {
     job.value = result.value.positions[0].position;
   } else {
+    throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
   }
 });
 

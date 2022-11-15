@@ -43,4 +43,8 @@ locationFeed.value = await getLocation(route.params.id).then((result) => {
   // console.log(result);
   location.value = result.value.locations[0].location;
 });
+
+if (!location.value) {
+  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+}
 </script>
