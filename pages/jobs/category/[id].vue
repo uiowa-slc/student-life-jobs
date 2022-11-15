@@ -21,7 +21,10 @@
           <main id="main">
             <h1>{{ category.name }}</h1>
             <p>
-              The following open jobs are categorized as "{{ category.name }}"":
+              The following open jobs are categorized as "<strong>{{
+                category.name
+              }}</strong
+              >":
             </p>
             <JobList :jobs="jobs.value.positions" />
           </main>

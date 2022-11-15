@@ -1,6 +1,10 @@
+.search-container-home {
+  max-width: 600px;
+  margin: auto;
+}
+
 .search {
   border-bottom: 3px solid #ccc;
-  max-width: 600px;
 
   &:focus {
     border-color: gold;

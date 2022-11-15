@@ -25,6 +25,9 @@
 <script setup>
 const search = ref([]);
 const router = useRouter();
+const props = defineProps({
+  term: String,
+});
 
 function handleSearch(term) {
   if (term) {

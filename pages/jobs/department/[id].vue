@@ -20,7 +20,9 @@
           <main id="main">
             <h1>{{ dept.name }}</h1>
             <p>
-              The following open jobs are in the department {{ dept.name }}:
+              The following open jobs are listed in the department
+              <strong>{{ dept.name }}</strong
+              >:
             </p>
             <JobList :jobs="jobs.value.positions" />
           </main>

@@ -6,7 +6,7 @@
         color="tertiary"
         size="large"
         class="bttn bttn--tertiary bttn--large browse-jobs__button"
-        >Find a job
+        >Browse jobs
         <svg
           class="svg-inline--fa"
           xmlns="http://www.w3.org/2000/svg"

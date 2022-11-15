@@ -17,6 +17,7 @@
               </li>
             </ol>
           </nav>
+          <Search :term="route.params.term" />
           <main id="main">
             <h1>Results for "{{ route.params.term }}":</h1>
             <div v-if="jobs.length > 0">

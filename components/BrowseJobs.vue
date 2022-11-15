@@ -5,7 +5,9 @@
         <main>
           <div class="py-4">
             <h1 class="text-center">Find a job on campus:</h1>
-            <Search />
+            <div :class="{ 'search-container-home': route.path == '/' }">
+              <Search />
+            </div>
           </div>
           <section class="bg-gray p-4">
             <h2 class="mt-0">All currently open jobs:</h2>
@@ -79,7 +81,7 @@
 
 <script setup>
 import { ref } from "vue";
-
+const route = useRoute();
 const jobs = ref([]);
 const locations = ref([]);
 const categories = ref([]);

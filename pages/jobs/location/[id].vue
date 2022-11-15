@@ -19,7 +19,11 @@
           </nav>
           <main id="main">
             <h1>{{ location.name }}</h1>
-            <p>The following open jobs are located at {{ location.name }}:</p>
+            <p>
+              The following open jobs are located at
+              <strong>{{ location.name }}</strong
+              >:
+            </p>
             <JobList :jobs="jobs.value.positions" />
           </main>
         </div>

@@ -91,7 +91,7 @@
               </p>
               <p
                 class="mb-0 text-center"
-                v-if="job.accepts_non_hawkid_applicants"
+                v-if="job.accepts_non_hawkid_applicants == 'true'"
               >
                 <small class="text-center"
                   ><a href="https://apps.studentlife.uiowa.edu/seo/"
@@ -113,7 +113,10 @@ const jobFeed = ref([]);
 
 jobFeed.value = await getJob(route.params.id).then((result) => {
   //console.log(result.value);
-  job.value = result.value.positions[0].position;
+  if (result.value.positions) {
+    job.value = result.value.positions[0].position;
+  } else {
+  }
 });
 
 if (job.value.has_open_job_posting == "true") {
