@@ -42,14 +42,9 @@
                     }}</span
                   ><br />
                   <strong>Open to non-UI students: </strong>
-                  <span
-                    :class="
-                      job.accepts_non_hawkid_applicants == 'true' ? 'yes' : 'no'
-                    "
-                    >{{
-                      job.accepts_non_hawkid_applicants == "true" ? "Yes" : "No"
-                    }}</span
-                  >
+                  <span>{{
+                    job.accepts_non_hawkid_applicants == "true" ? "Yes" : "No"
+                  }}</span>
                 </p>
                 <p class="mb-1">
                   <a
