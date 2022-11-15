@@ -43,7 +43,9 @@
                   ><br />
                   <strong>Open to non-UI students: </strong>
                   <span
-                    :class="job.has_open_job_posting == 'true' ? 'yes' : 'no'"
+                    :class="
+                      job.accepts_non_hawkid_applicants == 'true' ? 'yes' : 'no'
+                    "
                     >{{
                       job.accepts_non_hawkid_applicants == "true" ? "Yes" : "No"
                     }}</span
@@ -114,55 +116,57 @@ jobFeed.value = await getJob(route.params.id).then((result) => {
   job.value = result.value.positions[0].position;
 });
 
-useJsonld(() => ({
-  "@context": "http://schema.org",
-  "@type": "JobPosting",
-  datePosted: "2022-11-12T00:00:00",
-  description: job.value.basic_job_function,
-  title: job.value.posting_title,
-  employmentType: "PART_TIME",
-  hiringOrganization: {
-    "@type": "Organization",
-    name: "University of Iowa",
-    sameAs: [
-      "https://en.wikipedia.org/wiki/University_of_Iowa",
-      "https://goo.gl/maps/vLD8h94JdRB2",
-      "https://www.facebook.com/universityofiowa",
-      "https://www.twitter.com/uiowa",
-      "https://www.instagram.com/uiowa",
-      "https://snapchat.com/add/uiowa",
-      "https://www.linkedin.com/school/university-of-iowa/",
-      "https://www.pinterest.com/uiowa",
-      "https://www.youtube.com/user/universityofiowa",
-    ],
-    url: "https://uiowa.edu",
-    telephone: "+1-319-335-3500",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://uiowa.edu/themes/custom/uids_base/uids/assets/images/uiowa-primary.png",
+if (job.value.has_open_job_posting == "true") {
+  useJsonld(() => ({
+    "@context": "http://schema.org",
+    "@type": "JobPosting",
+    datePosted: "2022-11-12T00:00:00",
+    description: job.value.basic_job_function,
+    title: job.value.posting_title,
+    employmentType: "PART_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "University of Iowa",
+      sameAs: [
+        "https://en.wikipedia.org/wiki/University_of_Iowa",
+        "https://goo.gl/maps/vLD8h94JdRB2",
+        "https://www.facebook.com/universityofiowa",
+        "https://www.twitter.com/uiowa",
+        "https://www.instagram.com/uiowa",
+        "https://snapchat.com/add/uiowa",
+        "https://www.linkedin.com/school/university-of-iowa/",
+        "https://www.pinterest.com/uiowa",
+        "https://www.youtube.com/user/universityofiowa",
+      ],
+      url: "https://uiowa.edu",
+      telephone: "+1-319-335-3500",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://uiowa.edu/themes/custom/uids_base/uids/assets/images/uiowa-primary.png",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Iowa City",
+        addressRegion: "IA",
+        postalCode: "52242",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "41.6639115 (WGS 84)",
+        longitude: "-91.535741 (WGS 84)",
+      },
     },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Iowa City",
-      addressRegion: "IA",
-      postalCode: "52242",
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Iowa City",
+        addressRegion: "IA",
+        postalCode: "52242",
+      },
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "41.6639115 (WGS 84)",
-      longitude: "-91.535741 (WGS 84)",
-    },
-  },
-  jobLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Iowa City",
-      addressRegion: "IA",
-      postalCode: "52242",
-    },
-  },
-}));
+  }));
+}
 </script>
 <style scoped>
 </style>
