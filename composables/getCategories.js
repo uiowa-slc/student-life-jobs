@@ -1,6 +1,6 @@
 export const getCategories = async () => {
   const config = useRuntimeConfig();
-  const feedBase = config.API_BASE_URL;
+  const feedBase = config.public.apiBase;
 
   var feedUrl;
   if (process.env.NODE_ENV == "development") {

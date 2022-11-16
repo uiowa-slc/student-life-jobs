@@ -1,6 +1,6 @@
 export const getJobs = async (category, department, location) => {
   const config = useRuntimeConfig();
-  const feedBase = config.API_BASE_URL;
+  const feedBase = config.public.apiBase;
   var feedUrl = feedBase + "feed/positions.json?open=true";
   var feedParams = "";
 

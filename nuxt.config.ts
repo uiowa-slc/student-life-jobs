@@ -47,8 +47,10 @@ export default defineNuxtConfig({
       },
     },
   },
-  publicRuntimeConfig: {
-    API_BASE_URL: "https://apps.studentlife.uiowa.edu/seo/",
+  runtimeConfig: {
+    public: {
+      apiBase: "https://apps.studentlife.uiowa.edu/seo/",
+    },
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components

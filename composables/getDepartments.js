@@ -1,6 +1,6 @@
 export const getDepartments = async () => {
   const config = useRuntimeConfig();
-  const feedBase = config.API_BASE_URL;
+  const feedBase = config.public.apiBase;
   // const feedUrl = feedBase + "feed/departments.json";
 
   var feedUrl;

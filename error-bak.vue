@@ -3,6 +3,7 @@
     <Head>
       <Title>Listing not found</Title>
     </Head>
+    <IowaBar />
     <Header />
     <div class="container content">
       <div class="row">
@@ -19,7 +20,7 @@
           </nav>
 
           <main id="main">
-            <h1>{{ category.name }}</h1>
+            <h1>Listing not found</h1>
             <p>
               Sorry, the page or job listing you're trying to visit has been
               moved or is no longer being listed on this website by Division of
