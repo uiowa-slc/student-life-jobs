@@ -45,4 +45,8 @@ categoryFeed.value = await getCategory(route.params.id).then((result) => {
   //console.log(result);
   category.value = result.value.categories[0].category;
 });
+
+if (!category.value) {
+  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+}
 </script>

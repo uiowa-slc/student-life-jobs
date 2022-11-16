@@ -7,7 +7,7 @@
     <Header />
     <div class="container content">
       <div class="row">
-        <div class="col-lg-8 pt-4 m-auto">
+        <div class="col-lg-10 col-xl-8 pt-4 m-auto">
           <main id="main">
             <div v-if="job">
               <nav aria-label="breadcrumb">

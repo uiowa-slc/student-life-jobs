@@ -10,7 +10,9 @@
             </div>
           </div>
           <section class="bg-gray p-4">
-            <h2 class="mt-0">All currently open jobs:</h2>
+            <h2 class="mt-0">
+              All currently open jobs in the Division of Student Life:
+            </h2>
             <JobList
               v-if="jobs.value"
               :jobs="jobs.value.positions"

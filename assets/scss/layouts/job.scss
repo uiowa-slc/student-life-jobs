@@ -9,7 +9,7 @@
 }
 
 .sidecar {
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     max-width: 40%;
   }
 }

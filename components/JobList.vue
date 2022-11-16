@@ -9,7 +9,7 @@
     </ul>
     <div v-else>
       <p>
-        <strong>No currently hiring jobs found.</strong
+        <strong>No currently hiring jobs found. </strong
         ><NuxtLink to="/#find">Try searching again</NuxtLink>.
       </p>
     </div>

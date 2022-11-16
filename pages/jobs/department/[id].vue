@@ -43,4 +43,8 @@ deptFeed.value = await getDepartment(route.params.id).then((result) => {
   //console.log(result);
   dept.value = result.value.departments[0].department;
 });
+
+if (!dept.value) {
+  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+}
 </script>

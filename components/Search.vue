@@ -8,7 +8,7 @@
         type="search"
         id="search"
         v-model="term"
-        placeholder="Search for a job"
+        placeholder="Search for a job in the Division of Student Life"
         class="form-control border-0 search-input"
       />
       <button type="submit" class="search-button">
@@ -20,6 +20,16 @@
         <span class="sr-only">Search</span>
       </button>
     </form>
+    <p class="small">More ways to find a job:</p>
+    <ul class="small">
+      <li>
+        <a href="https://careers.uiowa.edu/handshake">Handshake</a> (full-time
+        and part-time positions, internships)
+      </li>
+      <li>
+        <a href="https://jobs.uiowa.edu">Jobs@UIowa</a> (full-time positions)
+      </li>
+    </ul>
   </div>
 </template>
 <script setup>
