@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <Head>
       <Title>{{ job.posting_title }}</Title>
       <Meta name="description" :content="job.basic_job_function" />
@@ -22,48 +23,31 @@
               </nav>
 
               <h1>{{ job.posting_title }}</h1>
-              <div
-                class="bg-gray p-4 mb-3 ms-md-3 mb-md-3 float-md-end sidecar"
-              >
+              <div class="bg-gray p-4 mb-3 ms-md-3 mb-md-3 float-md-end sidecar">
                 <p class="">
                   <strong>Location: </strong>
                   <NuxtLink :href="'/jobs/location/' + job.location_id">{{
-                    job.work_location
-                  }}</NuxtLink
-                  ><br />
+                      job.work_location
+                  }}</NuxtLink><br />
                   <strong>Rate of pay: </strong> {{ job.rate_of_pay }}<br />
                   <strong>Hiring status: </strong>
-                  <span
-                    :class="job.has_open_job_posting == 'true' ? 'yes' : 'no'"
-                    >{{
+                  <span :class="job.has_open_job_posting == 'true' ? 'yes' : 'no'">{{
                       job.has_open_job_posting == "true"
                         ? "Currently hiring"
                         : "Not currently hiring"
-                    }}</span
-                  ><br />
+                  }}</span><br />
                   <strong>Open to non-UI students: </strong>
                   <span>{{
-                    job.accepts_non_hawkid_applicants == "true" ? "Yes" : "No"
+                      job.accepts_non_hawkid_applicants == "true" ? "Yes" : "No"
                   }}</span>
                 </p>
                 <p class="mb-1">
-                  <a
-                    class="bttn bttn--full bttn--tertiary bttn--small"
-                    :href="job.job_posting_url"
-                    target="_blank"
-                    rel="noopener"
-                    >Apply for this job <i class="fa-arrow-right fas"></i
-                  ></a>
+                  <a class="bttn bttn--full bttn--tertiary bttn--small" :href="job.job_posting_url" target="_blank"
+                    rel="noopener">Apply for this job <i class="fa-arrow-right fas"></i></a>
                 </p>
-                <p
-                  class="mb-0 text-center"
-                  v-if="job.accepts_non_hawkid_applicants == 'true'"
-                >
-                  <small class="text-center"
-                    ><a href="https://apps.studentlife.uiowa.edu/seo/"
-                      >Not a UI student? Apply here.</a
-                    ></small
-                  >
+                <p class="mb-0 text-center" v-if="job.accepts_non_hawkid_applicants == 'true'">
+                  <small class="text-center"><a href="https://apps.studentlife.uiowa.edu/seo/">Not a UI student? Apply
+                      here.</a></small>
                 </p>
               </div>
               <p>{{ job.basic_job_function }}</p>
@@ -76,23 +60,13 @@
               <h2>What you will learn:</h2>
               <p>{{ job.what_you_will_learn }}</p>
               <p class="text-center mt-5">
-                <a
-                  class="bttn bttn--tertiary bttn--large"
-                  :href="job.job_posting_url"
-                  target="_blank"
-                  rel="noopener"
-                  >Apply for this job
+                <a class="bttn bttn--tertiary bttn--large" :href="job.job_posting_url" target="_blank"
+                  rel="noopener">Apply for this job
                 </a>
               </p>
-              <p
-                class="mb-0 text-center"
-                v-if="job.accepts_non_hawkid_applicants == 'true'"
-              >
-                <small class="text-center"
-                  ><a href="https://apps.studentlife.uiowa.edu/seo/"
-                    >Not a UI student? Apply here.</a
-                  ></small
-                >
+              <p class="mb-0 text-center" v-if="job.accepts_non_hawkid_applicants == 'true'">
+                <small class="text-center"><a href="https://apps.studentlife.uiowa.edu/seo/">Not a UI student? Apply
+                    here.</a></small>
               </p>
             </div>
           </main>
@@ -107,11 +81,11 @@ const job = ref([]);
 const jobFeed = ref([]);
 
 jobFeed.value = await getJob(route.params.id).then((result) => {
-  console.log(result.value);
+  //(result.value);
   if (result.value) {
     job.value = result.value.positions[0].position;
   } else {
-    //throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+    throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
   }
 });
 
@@ -168,4 +142,5 @@ if (job.value.has_open_job_posting == "true") {
 }
 </script>
 <style scoped>
+
 </style>
