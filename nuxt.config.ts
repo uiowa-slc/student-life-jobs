@@ -56,9 +56,7 @@ export default defineNuxtConfig({
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/google-fonts"],
-  modules: ["nuxt-jsonld"],
+  modules: ["nuxt-jsonld", "@nuxtjs/google-fonts"],
   image: { domains: ["content.uiowa.edu"] },
   build: {
     // have to transpile font awesome for some reason:
