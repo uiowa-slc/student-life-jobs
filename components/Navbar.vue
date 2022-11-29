@@ -25,7 +25,13 @@
               <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav">
                   <li class="nav-item current nav-item">
-                    <NuxtLink class="nav-link" href="/">Find a Job</NuxtLink>
+                    <NuxtLink class="nav-link" href="/"
+                      ><font-awesome-icon
+                        icon="fa-solid fa-magnifying-glass"
+                        class="me-2"
+                      />
+                      Find a Job</NuxtLink
+                    >
                   </li>
 
                   <li class="nav-item link nav-item">

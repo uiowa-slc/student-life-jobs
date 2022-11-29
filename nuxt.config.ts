@@ -55,12 +55,17 @@ export default defineNuxtConfig({
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  plugins: ["~/plugins/fontawesome.js"],
 
   modules: ["nuxt-jsonld", "@nuxtjs/google-fonts"],
   image: { domains: ["content.uiowa.edu"] },
   build: {
     // have to transpile font awesome for some reason:
     // https://github.com/nuxt/framework/discussions/3823
-    transpile: [],
+    transpile: [
+      "@fortawesome/vue-fontawesome",
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/free-solid-svg-icons",
+    ],
   },
 });

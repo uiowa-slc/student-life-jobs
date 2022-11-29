@@ -11,6 +11,7 @@
 <style lang="scss">
 @import "~/assets/scss/main.scss";
 @import "node_modules/uids/src/components/button/button.scss";
+@import "~/node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 </style>
 <script setup>
 useHead({
