@@ -1,10 +1,9 @@
 <template>
   <div>
-    <ul v-if="props.jobs.length > 0" class="job-list">
+    <ul v-if="props.jobs.length > 0" class="job-list fa-ul">
       <li v-for="job in props.jobs" :key="job.position.id">
-        <font-awesome-icon icon="fa fa-user" />&nbsp;<NuxtLink
-          :href="'/jobs/show/' + job.position.id"
-        >
+        <span class="fa-li"><font-awesome-icon icon="fa fa-user" /></span
+        ><NuxtLink :href="'/jobs/show/' + job.position.id">
           <strong>{{ job.position.posting_title }}</strong></NuxtLink
         >
       </li>
@@ -24,8 +23,3 @@ const props = defineProps({
 
 // console.log(props.jobs);
 </script>
-<style scoped>
-.job-list {
-  list-style-type: none;
-}
-</style>

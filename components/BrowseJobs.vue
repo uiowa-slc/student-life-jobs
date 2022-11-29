@@ -40,50 +40,56 @@
           </section>
           <section class="bg-gray p-4">
             <h2 class="mt-0">Jobs by location:</h2>
-            <ul class="column-list mt-4 list-unstyled" v-if="locations.value">
-              <li
-                v-for="location in locations.value.locations"
-                :key="location.location.id"
-                :class="{
-                  active_postings: location.location.active_job_postings > 0,
-                }"
-              >
-                <font-awesome-icon
-                  icon="fa-solid fa-location-dot"
-                  v-if="location.location.active_job_postings > 0"
-                />
-                <font-awesome-icon
-                  icon="fa-solid fa-location-dot"
-                  style="opacity: 0.2"
-                  v-else
-                />
-                &nbsp;
-                <NuxtLink :href="'/jobs/location/' + location.location.id"
-                  >{{ location.location.name }} ({{
-                    location.location.active_job_postings
-                  }})</NuxtLink
+            <div class="column-list mt-4">
+              <ul class="fa-ul" v-if="locations.value">
+                <li
+                  v-for="location in locations.value.locations"
+                  :key="location.location.id"
+                  :class="{
+                    active_postings: location.location.active_job_postings > 0,
+                  }"
                 >
-              </li>
-            </ul>
+                  <span class="fa-li">
+                    <font-awesome-icon
+                      icon="fa-solid fa-location-dot"
+                      v-if="location.location.active_job_postings > 0"
+                    />
+                    <font-awesome-icon
+                      icon="fa-solid fa-location-dot"
+                      style="opacity: 0.2"
+                      v-else
+                    />
+                  </span>
+                  <NuxtLink :href="'/jobs/location/' + location.location.id"
+                    >{{ location.location.name }} ({{
+                      location.location.active_job_postings
+                    }})</NuxtLink
+                  >
+                </li>
+              </ul>
+            </div>
           </section>
           <section class="p-4">
             <h2 class="mt-0">Jobs by department:</h2>
-            <ul class="column-list mt-4" v-if="departments.value">
-              <li
-                v-for="department in departments.value.departments"
-                :key="department.department.id"
-                :class="{
-                  active_postings:
-                    department.department.active_job_postings > 0,
-                }"
-              >
-                <NuxtLink :href="'/jobs/department/' + department.department.id"
-                  >{{ department.department.name }} ({{
-                    department.department.active_job_postings
-                  }})</NuxtLink
+            <div class="column-list mt-4">
+              <ul v-if="departments.value">
+                <li
+                  v-for="department in departments.value.departments"
+                  :key="department.department.id"
+                  :class="{
+                    active_postings:
+                      department.department.active_job_postings > 0,
+                  }"
                 >
-              </li>
-            </ul>
+                  <NuxtLink
+                    :href="'/jobs/department/' + department.department.id"
+                    >{{ department.department.name }} ({{
+                      department.department.active_job_postings
+                    }})</NuxtLink
+                  >
+                </li>
+              </ul>
+            </div>
           </section>
         </main>
       </div>
