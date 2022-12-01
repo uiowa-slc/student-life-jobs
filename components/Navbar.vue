@@ -42,7 +42,7 @@
 
                   <li class="nav-item link nav-item">
                     <NuxtLink class="nav-link" href="/departments"
-                      >Departments</NuxtLink
+                      >Departments and Units</NuxtLink
                     >
                   </li>
 
