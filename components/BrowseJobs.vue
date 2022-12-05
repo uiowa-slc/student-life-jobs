@@ -70,7 +70,7 @@
             </div>
           </section>
           <section class="p-4">
-            <h2 class="mt-0">Jobs by department:</h2>
+            <h2 class="mt-0">Jobs by department/unit:</h2>
             <div class="column-list mt-4">
               <ul v-if="departments.value">
                 <li
