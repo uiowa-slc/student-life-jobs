@@ -25,7 +25,7 @@
               <div
                 class="bg-gray p-4 mb-3 ms-md-3 mb-md-3 float-md-end sidecar"
               >
-                <p class="">
+                <p>
                   <strong>Location: </strong>
                   <NuxtLink :href="'/jobs/location/' + job.location_id">{{
                     job.work_location
@@ -121,7 +121,7 @@ if (job.value.has_open_job_posting == "true") {
   useJsonld(() => ({
     "@context": "http://schema.org",
     "@type": "JobPosting",
-    datePosted: "2022-11-12T00:00:00",
+    datePosted: job.value.job_posting_start_date,
     description: job.value.basic_job_function,
     title: job.value.posting_title,
     employmentType: "PART_TIME",
