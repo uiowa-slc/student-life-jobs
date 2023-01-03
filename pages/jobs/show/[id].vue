@@ -122,6 +122,7 @@ if (job.value.has_open_job_posting == "true") {
     "@context": "http://schema.org",
     "@type": "JobPosting",
     datePosted: job.value.job_posting_start_date,
+    validThrough: job.value.job_posting_end_date,
     description: job.value.basic_job_function,
     title: job.value.posting_title,
     employmentType: "PART_TIME",
