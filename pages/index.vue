@@ -1,5 +1,18 @@
 <template>
   <div>
+    <Head>
+      <Title></Title>
+      <Meta
+        name="title"
+        content="Student Life Jobs | The University of Iowa"
+      />
+      <Meta
+        name="description"
+        content="Find a part-time job on campus! Working on campus
+              helps students connect with students, faculty, and staff that might be
+              outside of their field of study."
+      />
+    </Head>
     <Header />
     <img
       id="find"

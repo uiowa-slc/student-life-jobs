@@ -8,7 +8,7 @@
         type="search"
         id="search"
         v-model="term"
-        placeholder="Search for a job in the Division of Student Life"
+        placeholder="Search for a part-time job in the Division of Student Life"
         class="form-control border-0 search-input"
       />
       <button type="submit" class="search-button">
@@ -24,10 +24,10 @@
     <ul class="small">
       <li>
         <a href="https://careers.uiowa.edu/handshake">Handshake</a> (full-time
-        and part-time positions, internships)
+        and part-time jobs, internships)
       </li>
       <li>
-        <a href="https://jobs.uiowa.edu">Jobs@UIowa</a> (full-time positions)
+        <a href="https://jobs.uiowa.edu">Jobs@UIowa</a> (full-time jobs)
       </li>
     </ul>
   </div>

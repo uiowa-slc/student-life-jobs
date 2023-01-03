@@ -11,14 +11,14 @@
           </div>
           <section class="bg-gray p-4">
             <h2 class="mt-0">
-              All currently open jobs in the Division of Student Life:
+              All open part-time jobs in the Division of Student Life:
             </h2>
             <JobList
               v-if="jobs.value"
               :jobs="jobs.value.positions"
               class="column-list mt-4"
             />
-            <p v-else>No jobs currently found.</p>
+            <p v-else>No jobs currently available. Please check back soon.</p>
           </section>
           <section class="p-4">
             <h2 class="mt-0">Jobs by category:</h2>
