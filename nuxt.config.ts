@@ -1,3 +1,4 @@
+import dynamicRoutes from "./helpers/dynamicRoutes";
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
@@ -57,7 +58,17 @@ export default defineNuxtConfig({
   components: true,
   plugins: ["~/plugins/fontawesome.js"],
 
-  modules: ["nuxt-jsonld", "@nuxtjs/google-fonts"],
+  modules: [
+    "nuxt-jsonld",
+    "@nuxtjs/google-fonts",
+    ["@funken-studio/sitemap-nuxt-3", { generateOnBuild: true }],
+  ],
+
+  sitemap: {
+    hostname: "https://studentlifejobs.uiowa.edu",
+    gzip: true,
+    routes: dynamicRoutes,
+  },
   image: { domains: ["content.uiowa.edu"] },
   build: {
     // have to transpile font awesome for some reason:

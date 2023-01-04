@@ -20,6 +20,7 @@
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/vue-fontawesome": "^3.0.1"
+    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@funken-studio/sitemap-nuxt-3": "^4.0.4"
   }
 }

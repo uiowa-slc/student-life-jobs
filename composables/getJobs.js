@@ -25,7 +25,7 @@ export const getJobs = async (category, department, location) => {
     feedParams += "&location_id=" + location;
   }
   feedUrl += feedParams;
-  // console.log(feedUrl);
+  //console.log(feedUrl);
   const { data: feed } = await useFetch(feedUrl, { key: feedUrl });
   //console.log(feedBase + "feed/positions.json");
   return feed;
