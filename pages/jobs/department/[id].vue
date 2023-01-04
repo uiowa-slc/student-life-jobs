@@ -13,7 +13,7 @@
                 <NuxtLink href="/">Find a Job</NuxtLink>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Department/unit: {{ dept.name }}
+                {{ dept.name }}
               </li>
             </ol>
           </nav>
