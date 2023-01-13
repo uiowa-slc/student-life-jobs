@@ -1,6 +1,6 @@
 <template>
   <div id="search">
-    <form
+    <!-- <form
       class="d-flex mx-auto search mb-4"
       @submit.prevent="handleSearch(term)"
     >
@@ -19,16 +19,14 @@
         </svg>
         <span class="sr-only">Search</span>
       </button>
-    </form>
-    <p class="small">More ways to find a job:</p>
-    <ul class="small">
+    </form> -->
+    <p class="small text-center">More ways to find a job:</p>
+    <ul class="small text-center">
       <li>
         <a href="https://careers.uiowa.edu/handshake">Handshake</a> (full-time
         and part-time jobs, internships)
       </li>
-      <li>
-        <a href="https://jobs.uiowa.edu">Jobs@UIowa</a> (full-time jobs)
-      </li>
+      <li><a href="https://jobs.uiowa.edu">Jobs@UIowa</a> (full-time jobs)</li>
     </ul>
   </div>
 </template>
