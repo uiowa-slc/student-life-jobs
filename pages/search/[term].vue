@@ -36,23 +36,38 @@
 const route = useRoute();
 const allJobs = ref([]);
 const jobs = ref([]);
-// @todo: cleanup
+
 allJobs.value = await getJobs().then((result) => {
   var results = [];
   var resultsSet = new Set();
   var positionList = result.value.positions;
   var term = route.params.term.toLowerCase();
-  // var term = route.params.term;
-  var jobsFilteredByTitle = positionList.filter(function (position) {
-    return position.position.posting_title.toLowerCase().includes(term);
-  });
-  var jobsFilteredByDescription = positionList.filter(function (position) {
-    return position.position.basic_job_function.toLowerCase().includes(term);
+
+  var jobsFilteredByTitle = [];
+  var jobsFilteredByDescription = [];
+  var jobsFilteredByLocation = [];
+
+  // Apparently we can't assume that jobs/positions will have
+  // default fields like basic_job_function, etc,
+  // so check if they exist first before filtering:
+
+  jobsFilteredByTitle = positionList.filter(function (position) {
+    if (position.position.posting_title) {
+      return position.position.posting_title.toLowerCase().includes(term);
+    }
   });
 
-  var jobsFilteredByLocation = positionList.filter(function (position) {
-    //console.log(position.position.work_location.toLowerCase());
-    return position.position.work_location.toLowerCase().includes(term);
+  jobsFilteredByDescription = positionList.filter(function (position) {
+    if (position.position.basic_job_function) {
+      return position.position.basic_job_function.toLowerCase().includes(term);
+    }
+  });
+
+  jobsFilteredByLocation = positionList.filter(function (position) {
+    if (position.position.work_location) {
+      //console.log(position.position.work_location.toLowerCase());
+      return position.position.work_location.toLowerCase().includes(term);
+    }
   });
 
   results = results.concat(
