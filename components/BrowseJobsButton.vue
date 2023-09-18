@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray p-4 my-5 browse-jobs">
+  <div class="bg-gray p-4 mt-5 browse-jobs">
     <p class="text-center m-0">
       <NuxtLink
         href="/#find"
